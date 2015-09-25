@@ -18,7 +18,7 @@
 #
 # DO NOT USE ANY OF THE BUILT IN LIST METHODS, OR len(l)
 
-FURTHER_STUDY = False
+FURTHER_STUDY = True
 
 
 def head(input_list):
@@ -270,7 +270,11 @@ def custom_len(input_list):
 
     """
 
-    return 0
+    item_total = 0
+    for item in input_list:
+        item_total += 1
+
+    return item_total
 
 
 # For the next four exercises, you'll need to be clever and think about ways
@@ -296,7 +300,8 @@ def custom_append(input_list, value):
 
     """
 
-    pass
+    new_tail = [last(input_list),value] #['Do', 'Re']
+    input_list[-1:] = new_tail #replace ['Do'] with ['Do','Re']
 
 
 def custom_extend(input_list, second_list):
@@ -313,7 +318,8 @@ def custom_extend(input_list, second_list):
 
     """
 
-    pass
+    for item in second_list:
+        custom_append(input_list,item)
 
 
 def custom_insert(input_list, index, value):
@@ -330,7 +336,8 @@ def custom_insert(input_list, index, value):
 
     """
 
-    pass
+    inserted_value_and_neighbor = [value,input_list[index]]
+    input_list[index:index+1] = inserted_value_and_neighbor
 
 
 def custom_remove(input_list, value):
