@@ -45,7 +45,7 @@ def tail(input_list):
 
     """
 
-    return input_list[1: ]
+    return input_list[1:]
 
 
 def last(input_list):
@@ -92,7 +92,7 @@ def first_three(input_list):
 
     """
 
-    return input_list[0:4]
+    return input_list[0:3] #0 isn't necessary!
 
 
 def last_five(input_list):
@@ -166,8 +166,8 @@ def replace_head(input_list):
 
     """
 
-    input_list[0]=42
-    return None
+    input_list[0] = 42
+
 
 
 def replace_third_and_last(input_list):
@@ -184,8 +184,9 @@ def replace_third_and_last(input_list):
 
     """
 
-    
-    return None
+    input_list[2] = 37
+    input_list[-1] = 37
+
 
 
 def replace_middle(input_list):
@@ -201,8 +202,7 @@ def replace_middle(input_list):
     True
 
     """
-
-    pass
+    input_list[2:-2] = [42, 37]
 
 
 def delete_third_and_seventh(input_list):
@@ -218,8 +218,8 @@ def delete_third_and_seventh(input_list):
     True
 
     """
-
-    pass
+    input_list[2:3] = []
+    input_list[5:6] = []
 
 
 def delete_middle(input_list):
@@ -235,8 +235,7 @@ def delete_middle(input_list):
     True
 
     """
-
-    pass
+    input_list[2:-2] = []
 
 
 ##############################################################################
